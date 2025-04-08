@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 3px 15px #089da1;
+  padding: 1%;
+
+  .logo {
+    height: 2rem;
+    width: auto;
+  }
+
+  nav {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  .searchFavIcon {
+    width: 4%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
