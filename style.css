@@ -167,4 +167,51 @@ header {
     }/*reviewsCardsContainer*/
   } /*reviews*/
 
+  #ourBlog{
+    padding: 1%;
+
+    h1{
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .ourBlogCardsContainer{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3%;
+
+      .ourBlogCard{
+        width: 25%;
+        box-shadow: 1px 1px 5px black;
+
+
+      .blogCardImage{
+        height: 60%;
+      }        
+
+      .blogCardText{
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 3%;
+
+        h3{
+          color: var(--mainColor);
+        }
+        p{
+          font-size: small;
+        }
+        .blogIcons{
+          display: flex;
+          justify-content: space-between;
+          color: var(--mainColor);
+          margin-bottom: 1rem;
+        }
+
+      } /*blogCardText*/
+      } /*ourBlogCard*/
+    }/*ourBlogCardsContainer*/
+  } /*ourBlog*/
+
 } /*container*/
