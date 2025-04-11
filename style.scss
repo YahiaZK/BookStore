@@ -1,0 +1,93 @@
+
+$primary-color: #089da1;
+  
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 3px 15px $primary-color;
+    padding: 1%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+  
+    .logo {
+      height: 2rem;
+      width: auto;
+      user-select: none;
+    }
+  
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+    }
+    .searchFavIcon {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      .fa-magnifying-glass:hover{
+        cursor: pointer;
+      }
+      .fa-heart{
+        cursor: pointer;
+      }
+    }
+}
+  
+#welcome {
+    width: auto;
+    height: 100vh;
+    background-image: url(assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    #welcomeSection1 {
+      padding-left: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4.2rem;
+      #welcomeTitle {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      #welcomeTitleColored {
+        color: $primary-color;
+      }
+  
+      #welcomeText {
+        font-size: 1.4rem;
+      }
+  
+      button {
+        color: white;
+        background-color: $primary-color;
+        padding: 0.5rem;
+        border: none;
+        height: 2.5rem;
+        width: 8rem;
+        font-size: 1.1rem;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    }
+}
+  
