@@ -60,7 +60,7 @@ header {
         font-size: small;
       }
 
-      .learnMoreBtn{
+      .aboutUsBtn{
         width: 20%;
         padding: 0.3rem;
         background-color: var(--mainColor);
@@ -72,18 +72,44 @@ header {
   #newArrivals{
     h1{
       text-align: center;
+      margin: 3%;
     }
     .newArrivalsCardsContainer{
       display: flex;
       flex-wrap: wrap;
+      gap: 5rem;
+      margin-right: 2%;
+      margin-left: 2%;
+      justify-content: center;
 
       .newArrivalsCard{
         border: 0.1rem solid #919191;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 0.3rem;
-      }
-    }
+        width: 12%;
+        padding: 1%;
+
+        .cardImage{
+          width: 80%;
+          box-shadow: 1px 1px 5px black;
+        }
+
+        .cardStars{
+          i{
+            color: var(--mainColor);
+          }
+        }
+
+        .newArrivalsBtn{
+          background-color: white;
+          border: 2px solid var(--mainColor);
+          padding: 3%;
+        }
+
+      } /*newArrivalsCard*/
+    } /*newArrivalsCardsContaner*/
   } /*newArrivals*/
 
 } /*container*/
