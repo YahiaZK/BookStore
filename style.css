@@ -39,7 +39,7 @@ header {
 .container{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 
   #aboutUs{
     display: flex;
@@ -69,6 +69,7 @@ header {
       }
     } /*aboutUsText*/
   } /*aboutUs*/
+
   #newArrivals{
     h1{
       text-align: center;
@@ -80,6 +81,7 @@ header {
       gap: 5rem;
       margin-right: 2%;
       margin-left: 2%;
+      margin: 0% 2% 5% 2%;
       justify-content: center;
 
       .newArrivalsCard{
@@ -107,9 +109,62 @@ header {
           border: 2px solid var(--mainColor);
           padding: 3%;
         }
-
       } /*newArrivalsCard*/
     } /*newArrivalsCardsContaner*/
   } /*newArrivals*/
+
+  #reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    .reviewsCardsContainer{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5%;
+      justify-content: center;
+
+      .reviewsCard{
+        width: 20%;
+        box-shadow: 0.5px 0.5px 8px var(--mainColor);
+        padding: 1%;
+
+        .cardTop{
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 5%;
+
+          .reviewAutherInfo{
+            img{
+              border-radius: 50%;
+            }
+          }
+
+          .quotation{
+            width: 35%;
+            i{
+              color: #eaeaea;
+              width: 100px;
+            }
+          }
+        } /*cardTop*/
+        .cardBottom{
+          margin-bottom: 8%;
+          
+          p{
+            font-size: small;
+          }
+          .cardStars{
+            margin-top: 2%;
+            i{
+              color: var(--mainColor);
+            }
+          }
+        } /*cardBottom*/
+      }/*reviewsCard*/
+    }/*reviewsCardsContainer*/
+  } /*reviews*/
 
 } /*container*/
