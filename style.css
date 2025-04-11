@@ -8,7 +8,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 1px 3px 15px #089da1;
+  box-shadow: 0rem 0rem 1rem #089da1;
   padding: 1%;
   position: fixed;
   top: 0;
@@ -83,4 +83,33 @@ header .searchFavIcon .fa-heart {
 }
 #welcome #welcomeSection1 button:hover {
   cursor: pointer;
+}
+
+#services {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#services .service {
+  padding: 1rem;
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  border: none;
+  box-shadow: 0rem 0rem 1rem #089da1;
+  text-align: center;
+}
+#services .service .fa-solid {
+  color: #089da1;
+  font-size: 3.5rem;
+}
+
+.dev-space {
+  height: 500px;
+  background: rgb(218, 21, 7);
 }/*# sourceMappingURL=style.css.map */
