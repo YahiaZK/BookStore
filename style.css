@@ -72,7 +72,8 @@ header .searchFavIcon .fa-heart {
 #welcome #welcomeSection1 #welcomeText {
   font-size: 1.4rem;
 }
-#welcome #welcomeSection1 button {
+
+button {
   color: white;
   background-color: #089da1;
   padding: 0.5rem;
@@ -81,7 +82,8 @@ header .searchFavIcon .fa-heart {
   width: 8rem;
   font-size: 1.1rem;
 }
-#welcome #welcomeSection1 button:hover {
+
+button:hover {
   cursor: pointer;
 }
 
@@ -187,6 +189,21 @@ header .searchFavIcon .fa-heart {
 ::-webkit-scrollbar-thumb {
   background-color: #089da1;
   border-radius: 1rem;
+}
+
+#banner {
+  margin-top: 2rem;
+  background-image: url(assets/banner.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 1920/505;
+  position: relative;
+}
+#banner button {
+  position: absolute;
+  bottom: 7rem;
+  left: 7.5rem;
 }
 
 .dev-space {

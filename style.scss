@@ -79,20 +79,22 @@ header {
         font-size: 1.4rem;
       }
   
-      button {
-        color: white;
-        background-color: $primary-color;
-        padding: 0.5rem;
-        border: none;
-        height: 2.5rem;
-        width: 8rem;
-        font-size: 1.1rem;
-      }
-      button:hover {
-        cursor: pointer;
-      }
+      
     }
 }
+
+button {
+    color: white;
+    background-color: $primary-color;
+    padding: 0.5rem;
+    border: none;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1.1rem;
+  }
+  button:hover {
+    cursor: pointer;
+  }
 
 #services{
     margin-top: 2%;
@@ -213,6 +215,23 @@ header {
 ::-webkit-scrollbar-thumb{
     background-color: $primary-color;
     border-radius: 1rem;
+}
+
+#banner{
+    margin-top: 2rem;
+    background-image: url(assets/banner.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%; 
+    aspect-ratio: 1920 / 505;
+    position: relative;
+    
+    button{
+        position: absolute;
+        bottom: 7rem;
+        left: 7.5rem;
+        
+    }
 }
 
 
