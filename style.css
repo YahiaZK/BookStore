@@ -109,7 +109,88 @@ header .searchFavIcon .fa-heart {
   font-size: 3.5rem;
 }
 
+#featuredBooks h1 {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 3.8rem;
+}
+#featuredBooks #scrollableContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.7rem;
+  overflow-x: scroll;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  scroll-behavior: smooth;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+#featuredBooks #scrollableContainer .bookContainer {
+  border: solid 0.1rem gray;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#featuredBooks #scrollableContainer .bookContainer .bookCover {
+  width: 7.5em;
+  height: 11.4em;
+}
+#featuredBooks #scrollableContainer .bookContainer h2 {
+  font-size: 1.4rem;
+}
+#featuredBooks #scrollableContainer .bookContainer .authorName {
+  color: #c0c0c0;
+}
+#featuredBooks #scrollableContainer .bookContainer .bookType {
+  color: #089da1;
+}
+#featuredBooks #scrollableContainer .bookContainer .discount {
+  font-weight: bold;
+}
+#featuredBooks #scrollableContainer .bookContainer .discount sub {
+  font-weight: normal;
+}
+#featuredBooks #scrollableContainer .bookContainer button {
+  color: black;
+  background-color: white;
+  border: solid 0.16rem #089da1;
+  padding: 0.5rem;
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 1.1rem;
+}
+#featuredBooks #scrollableContainer .bookContainer button:hover {
+  cursor: pointer;
+}
+#featuredBooks #scrollableContainer .bookContainer:hover {
+  box-shadow: 0 0 0.3rem #089da1;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.5rem;
+  background-color: rgb(234, 234, 234);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #089da1;
+  border-radius: 1rem;
+}
+
 .dev-space {
   height: 500px;
   background: rgb(218, 21, 7);
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */

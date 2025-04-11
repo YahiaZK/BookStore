@@ -1,11 +1,14 @@
 
 $primary-color: #089da1;
+$secondary-color: #c0c0c0;
   
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
   
 header {
     display: flex;
@@ -117,9 +120,106 @@ header {
     }
 }
 
+#featuredBooks{
+
+    h1{
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        font-size: 3.8rem;
+
+    }
+
+    
+
+    #scrollableContainer{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2.7rem;
+        overflow-x: scroll;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        scroll-behavior: smooth;
+        margin-left: 3rem;
+        margin-right: 3rem;
+
+        .bookContainer{
+            border: solid 0.1rem gray;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.4rem;
+            flex-shrink: 0;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            .bookCover{
+                width: 7.5em;     
+                height: 11.4em;  
+                
+            }
+
+            h2{
+                font-size: 1.4rem;
+            }
+            .authorName{
+                color: $secondary-color;
+            }
+            .bookType{
+                color: $primary-color;
+            }
+            .discount{
+                font-weight: bold;
+                sub{
+                    font-weight: normal;
+                }
+            }
+            button{
+                color: black;
+                background-color: white;
+                border: solid 0.16rem $primary-color;
+                padding: 0.5rem;
+                height: 2.5rem;
+                width: 8rem;
+                font-size: 1.1rem;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+
+        }
+        .bookContainer:hover{
+            box-shadow: 0 0 0.3rem $primary-color;
+        }
+    }   
+
+    
+
+}
+
+::-webkit-scrollbar{
+    width: 0.8rem;
+    height: 0.5rem;
+    background-color: rgb(234, 234, 234);
+}
+
+::-webkit-scrollbar-button{
+    display: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $primary-color;
+    border-radius: 1rem;
+}
+
+
 .dev-space {
     height: 500px;
     background: rgb(218, 21, 7);
+    margin-top: 50px;
   }
   
   
