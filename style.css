@@ -4,10 +4,15 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --mainColor: #089da1;
+}
+
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   box-shadow: 0rem 0rem 1rem #089da1;
   padding: 1%;
   position: fixed;
@@ -15,10 +20,12 @@ header {
   right: 0;
   left: 0;
   background-color: white;
+
 }
 header .logo {
   height: 2rem;
   width: auto;
+
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -276,3 +283,199 @@ footer #footerBottomSection p i {
 footer #footerBottomSection p span {
   color: #089da1;
 }/*# sourceMappingURL=style.css.map */
+=======
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /*aboutUs*/
+  /*newArrivals*/
+  /*reviews*/
+  /*ourBlog*/
+}
+.container #aboutUs {
+  display: flex;
+  justify-content: space-around;
+  /*aboutUsText*/
+}
+.container #aboutUs .aboutUsImage {
+  width: 40%;
+}
+.container #aboutUs .aboutUsText {
+  padding: 3rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container #aboutUs .aboutUsText p {
+  font-size: small;
+}
+.container #aboutUs .aboutUsText .aboutUsBtn {
+  width: 20%;
+  padding: 0.3rem;
+  background-color: var(--mainColor);
+  border: none;
+  color: white;
+}
+.container #newArrivals {
+  /*newArrivalsCardsContaner*/
+}
+.container #newArrivals h1 {
+  text-align: center;
+  margin: 3%;
+}
+.container #newArrivals .newArrivalsCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin: 0% 2% 5% 2%;
+  justify-content: center;
+  /*newArrivalsCard*/
+}
+.container #newArrivals .newArrivalsCardsContainer .newArrivalsCard {
+  border: 0.1rem solid #919191;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 12%;
+  padding: 1%;
+}
+.container #newArrivals .newArrivalsCardsContainer .newArrivalsCard .cardImage {
+  width: 80%;
+  box-shadow: 1px 1px 5px black;
+}
+.container
+  #newArrivals
+  .newArrivalsCardsContainer
+  .newArrivalsCard
+  .cardStars
+  i {
+  color: var(--mainColor);
+}
+.container
+  #newArrivals
+  .newArrivalsCardsContainer
+  .newArrivalsCard
+  .newArrivalsBtn {
+  background-color: white;
+  border: 2px solid var(--mainColor);
+  padding: 3%;
+}
+.container #reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  /*reviewsCardsContainer*/
+}
+.container #reviews .reviewsCardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5%;
+  justify-content: center;
+  /*reviewsCard*/
+}
+.container #reviews .reviewsCardsContainer .reviewsCard {
+  width: 20%;
+  box-shadow: 0.5px 0.5px 8px var(--mainColor);
+  padding: 1%;
+  /*cardTop*/
+  /*cardBottom*/
+}
+.container #reviews .reviewsCardsContainer .reviewsCard .cardTop {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+.container
+  #reviews
+  .reviewsCardsContainer
+  .reviewsCard
+  .cardTop
+  .reviewAutherInfo
+  img {
+  border-radius: 50%;
+}
+.container #reviews .reviewsCardsContainer .reviewsCard .cardTop .quotation {
+  width: 35%;
+}
+.container #reviews .reviewsCardsContainer .reviewsCard .cardTop .quotation i {
+  color: #eaeaea;
+  width: 100px;
+  font-size: 6rem;
+}
+.container #reviews .reviewsCardsContainer .reviewsCard .cardBottom {
+  margin-bottom: 8%;
+}
+.container #reviews .reviewsCardsContainer .reviewsCard .cardBottom p {
+  font-size: small;
+}
+.container #reviews .reviewsCardsContainer .reviewsCard .cardBottom .cardStars {
+  margin-top: 2%;
+}
+.container
+  #reviews
+  .reviewsCardsContainer
+  .reviewsCard
+  .cardBottom
+  .cardStars
+  i {
+  color: var(--mainColor);
+}
+.container #ourBlog {
+  padding: 1%;
+  /*ourBlogCardsContainer*/
+}
+.container #ourBlog h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.container #ourBlog .ourBlogCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /*ourBlogCard*/
+}
+.container #ourBlog .ourBlogCardsContainer .ourBlogCard {
+  width: 25%;
+  box-shadow: 1px 1px 5px black;
+  height: 27rem;
+  /*blogCardText*/
+}
+.container #ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardImage {
+  height: 60%;
+}
+.container #ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 3%;
+}
+.container #ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardText h3 {
+  color: var(--mainColor);
+}
+.container #ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardText p {
+  font-size: small;
+}
+.container
+  #ourBlog
+  .ourBlogCardsContainer
+  .ourBlogCard
+  .blogCardText
+  .blogIcons {
+  display: flex;
+  justify-content: space-between;
+  color: var(--mainColor);
+  margin-bottom: 1rem;
+}
+
+/*container*/ /*# sourceMappingURL=style.css.map */
+
