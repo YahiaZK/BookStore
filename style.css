@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-:root{
+:root {
   --mainColor: #089da1;
 }
 
@@ -36,31 +36,31 @@ header {
   }
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 
-  #aboutUs{
+  #aboutUs {
     display: flex;
     justify-content: space-around;
 
-    .aboutUsImage{
+    .aboutUsImage {
       width: 40%;
     }
 
-    .aboutUsText{
+    .aboutUsText {
       padding: 3rem;
       width: 40%;
       display: flex;
       flex-direction: column;
       gap: 2rem;
 
-      p{
+      p {
         font-size: small;
       }
 
-      .aboutUsBtn{
+      .aboutUsBtn {
         width: 20%;
         padding: 0.3rem;
         background-color: var(--mainColor);
@@ -70,12 +70,12 @@ header {
     } /*aboutUsText*/
   } /*aboutUs*/
 
-  #newArrivals{
-    h1{
+  #newArrivals {
+    h1 {
       text-align: center;
       margin: 3%;
     }
-    .newArrivalsCardsContainer{
+    .newArrivalsCardsContainer {
       display: flex;
       flex-wrap: wrap;
       gap: 5rem;
@@ -84,7 +84,7 @@ header {
       margin: 0% 2% 5% 2%;
       justify-content: center;
 
-      .newArrivalsCard{
+      .newArrivalsCard {
         border: 0.1rem solid #919191;
         display: flex;
         flex-direction: column;
@@ -93,18 +93,18 @@ header {
         width: 12%;
         padding: 1%;
 
-        .cardImage{
+        .cardImage {
           width: 80%;
           box-shadow: 1px 1px 5px black;
         }
 
-        .cardStars{
-          i{
+        .cardStars {
+          i {
             color: var(--mainColor);
           }
         }
 
-        .newArrivalsBtn{
+        .newArrivalsBtn {
           background-color: white;
           border: 2px solid var(--mainColor);
           padding: 3%;
@@ -113,75 +113,77 @@ header {
     } /*newArrivalsCardsContaner*/
   } /*newArrivals*/
 
-  #reviews{
+  #reviews {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
 
-    .reviewsCardsContainer{
+    .reviewsCardsContainer {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 1.5%;
       justify-content: center;
 
-      .reviewsCard{
+      .reviewsCard {
         width: 20%;
         box-shadow: 0.5px 0.5px 8px var(--mainColor);
         padding: 1%;
 
-        .cardTop{
+        .cardTop {
           display: flex;
           justify-content: space-between;
           padding-bottom: 5%;
 
-          .reviewAutherInfo{
-            img{
+          .reviewAutherInfo {
+            img {
               border-radius: 50%;
             }
           }
 
-          .quotation{
+          .quotation {
             width: 35%;
-            i{
+            i {
               color: #eaeaea;
               width: 100px;
             }
           }
         } /*cardTop*/
-        .cardBottom{
+        .cardBottom {
           margin-bottom: 8%;
-          
-          p{
+
+          p {
             font-size: small;
           }
-          .cardStars{
+          .cardStars {
             margin-top: 2%;
-            i{
+            i {
               color: var(--mainColor);
             }
           }
         } /*cardBottom*/
-      }/*reviewsCard*/
-    }/*reviewsCardsContainer*/
+      } /*reviewsCard*/
+    } /*reviewsCardsContainer*/
   } /*reviews*/
 
-  #ourBlog{
+  #ourBlog {
     padding: 1%;
 
-    h1{
+    h1 {
       text-align: center;
       margin-bottom: 2rem;
     }
-    .ourBlogCardsContainer{
+    .ourBlogCardsContainer {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
 
-      .ourBlogCard{
+      .ourBlogCard {
         width: 25%;
+        height: 25%;
         box-shadow: 1px 1px 5px black;
+<<<<<<< HEAD
         height:27rem;
 
       .blogCardImage{
@@ -196,20 +198,33 @@ header {
 
         h3{
           color: var(--mainColor);
+=======
+
+        .blogCardImage {
+          width: 100%;
+>>>>>>> 89c9570372b899a09e3c1722a404dcfde1c892c3
         }
-        p{
-          font-size: small;
-        }
-        .blogIcons{
+
+        .blogCardText {
           display: flex;
-          justify-content: space-between;
-          color: var(--mainColor);
-          margin-bottom: 1rem;
-        }
+          flex-direction: column;
+          gap: 0.7rem;
+          padding: 3%;
 
-      } /*blogCardText*/
+          h3 {
+            color: var(--mainColor);
+          }
+          p {
+            font-size: small;
+          }
+          .blogIcons {
+            display: flex;
+            justify-content: space-between;
+            color: var(--mainColor);
+            margin-bottom: 1rem;
+          }
+        } /*blogCardText*/
       } /*ourBlogCard*/
-    }/*ourBlogCardsContainer*/
+    } /*ourBlogCardsContainer*/
   } /*ourBlog*/
-
 } /*container*/
