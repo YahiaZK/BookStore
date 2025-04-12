@@ -200,7 +200,6 @@ button:hover {
 }
 
 #aboutUs .aboutUsText .aboutUsBtn {
-  width: 20%;
   padding: 0.3rem;
   background-color: var(--mainColor);
   border: none;
@@ -654,5 +653,43 @@ footer #footerBottomSection p i {
 
 footer #footerBottomSection p span {
   color: #089da1;
+}
+
+@media screen and (max-width: 414px) {
+  #aboutUs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #aboutUs .aboutUsImage, #aboutUs .aboutUsText {
+    width: 90%;
+    padding: 1rem;
+  }
+  #newArrivals .newArrivalsCardsContainer .newArrivalsCard {
+    width: 80%;
+  }
+  #reviews .reviewsCardsContainer .reviewsCard {
+    width: 90%;
+    margin: 1rem;
+  }
+  #ourBlog .ourBlogCardsContainer .ourBlogCard {
+    width: 90%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  #newArrivals .newArrivalsCardsContainer .newArrivalsCard {
+    width: 20%;
+  }
+  #reviews .reviewsCardsContainer .reviewsCard {
+    width: 35%;
+    margin: 1rem;
+  }
+  #ourBlog .ourBlogCardsContainer .ourBlogCard {
+    width: 45%;
+    margin: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

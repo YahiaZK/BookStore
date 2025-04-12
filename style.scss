@@ -152,7 +152,6 @@ button {
     }
 
     .aboutUsBtn {
-      width: 20%;
       padding: 0.3rem;
       background-color: var(--mainColor);
       border: none;
@@ -546,10 +545,71 @@ footer{
 
 }
 
+// responsive section
 
-  
+@media screen and ( max-width: 414px) {
+  #aboutUs{
+    flex-direction: column;
 
-  
+    .aboutUsImage, .aboutUsText{
+      width: 90%;
+      padding: 1rem;
+    }
+  }
 
+  #newArrivals{
+    .newArrivalsCardsContainer{
+      .newArrivalsCard{
+        width: 80%;
+      }
+    }
+  }
 
-  
+  #reviews{
+    .reviewsCardsContainer{
+      .reviewsCard{
+        width: 90%;
+        margin: 1rem;
+      }
+    }
+  }
+
+  #ourBlog{
+    .ourBlogCardsContainer{
+      .ourBlogCard{
+        width: 90%;
+        margin: 1rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px){
+  #newArrivals{
+    .newArrivalsCardsContainer{
+      .newArrivalsCard{
+        width: 20%;
+      }
+    }
+  }
+
+  #reviews{
+    .reviewsCardsContainer{
+      .reviewsCard{
+        width: 35%;
+        margin: 1rem;
+      }
+    }
+  }
+
+  #ourBlog{
+    .ourBlogCardsContainer{
+      .ourBlogCard{
+        width: 45%;
+        margin: 1rem;
+      }
+    }
+  }
+
+}
