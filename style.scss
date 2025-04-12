@@ -283,6 +283,16 @@ button {
       .cardImage {
         width: 80%;
         box-shadow: 1px 1px 5px black;
+        overflow: hidden;
+
+        img{
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        img:hover{
+          transform: scale(1.2);
+        }
       }
 
       .cardStars {
@@ -394,6 +404,10 @@ button {
 
       .blogCardImage{
         height: 60%;
+
+        img{
+          object-fit: cover;
+        }
       }        
 
       .blogCardText{
