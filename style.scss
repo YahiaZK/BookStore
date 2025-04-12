@@ -11,7 +11,9 @@ $input-box-color: #cacaca;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+:root {
+  --mainColor: #089da1;
+}
   
 header {
     display: flex;
@@ -25,9 +27,7 @@ header {
     left: 0;
     background-color: white;
 
-  :root {
-    --mainColor: #089da1;
-  }
+  
 
   
     .logo {
@@ -295,6 +295,7 @@ button {
         background-color: white;
         border: 2px solid var(--mainColor);
         padding: 3%;
+        color: black;
       }
     } /*newArrivalsCard*/
   } /*newArrivalsCardsContaner*/
