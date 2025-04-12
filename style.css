@@ -176,24 +176,42 @@ header {
     }
     .ourBlogCardsContainer {
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 3%;
+      justify-content: space-around;
 
       .ourBlogCard {
         width: 25%;
         height: 25%;
         box-shadow: 1px 1px 5px black;
+<<<<<<< HEAD
+        height:27rem;
+
+      .blogCardImage{
+        height: 60%;
+      }        
+
+      .blogCardText{
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 3%;
+
+        h3{
+          color: var(--mainColor);
+=======
 
         .blogCardImage {
           width: 100%;
+<<<<<<< HEAD
           height: 50%;
 
           img {
             width: 100%;
             object-fit: fill;
           }
+=======
+>>>>>>> 89c9570372b899a09e3c1722a404dcfde1c892c3
+>>>>>>> 0d27e64147dba42ce885eb9c07a82239030ccd98
         }
 
         .blogCardText {
