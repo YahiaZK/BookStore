@@ -26,7 +26,7 @@ header .logo {
 header .navigation {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.1rem;
 }
 header .navigation a {
   color: black;
