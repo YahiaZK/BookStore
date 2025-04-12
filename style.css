@@ -183,29 +183,13 @@ header {
         width: 25%;
         height: 25%;
         box-shadow: 1px 1px 5px black;
-<<<<<<< HEAD
         height:27rem;
 
       .blogCardImage{
         height: 60%;
       }        
 
-      .blogCardText{
-        display: flex;
-        flex-direction: column;
-        gap: 0.7rem;
-        padding: 3%;
-
-        h3{
-          color: var(--mainColor);
-=======
-
-        .blogCardImage {
-          width: 100%;
->>>>>>> 89c9570372b899a09e3c1722a404dcfde1c892c3
-        }
-
-        .blogCardText {
+      .blogCardText {
           display: flex;
           flex-direction: column;
           gap: 0.7rem;
