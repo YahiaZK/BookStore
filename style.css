@@ -176,15 +176,13 @@ header {
     }
     .ourBlogCardsContainer{
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 3%;
+      justify-content: space-around;
 
       .ourBlogCard{
         width: 25%;
         box-shadow: 1px 1px 5px black;
-
+        height:27rem;
 
       .blogCardImage{
         height: 60%;
