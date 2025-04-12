@@ -24,8 +24,8 @@ header .logo {
   height: 2rem;
   width: auto;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 header .navigation {
   display: flex;
@@ -391,8 +391,8 @@ footer #footerTopSection .box {
 footer #footerTopSection #footersLogoText img {
   width: 6rem;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   margin-bottom: 1rem;
 }
 footer #footerTopSection #footersLogoText p {
@@ -442,4 +442,4 @@ footer #footerBottomSection p i {
 }
 footer #footerBottomSection p span {
   color: #089da1;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
