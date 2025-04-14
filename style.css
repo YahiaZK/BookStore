@@ -19,6 +19,7 @@ header {
   right: 0;
   left: 0;
   background-color: white;
+  z-index: 999;
 }
 header .logo {
   height: 2rem;
@@ -36,6 +37,12 @@ header .navigation a {
   color: black;
   text-decoration: none;
   font-size: 1rem;
+}
+header .sidebar {
+  display: none;
+}
+header .menuButton {
+  display: none;
 }
 header .searchFavIcon {
   display: flex;
@@ -59,8 +66,13 @@ header .searchFavIcon .fa-heart {
   justify-content: center;
   align-items: center;
 }
+#welcome .items {
+  flex-grow: 1;
+}
 #welcome #welcomeSection1 {
   padding-left: 3rem;
+  padding-right: 0.5rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 4.2rem;
@@ -75,6 +87,14 @@ header .searchFavIcon .fa-heart {
 }
 #welcome #welcomeSection1 #welcomeText {
   font-size: 1.4rem;
+}
+#welcome #welcomeSection2 {
+  flex: 1;
+}
+#welcome #welcomeSection2 img {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
 }
 
 button {
@@ -92,15 +112,18 @@ button:hover {
 }
 
 #services {
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 5% 2% 2% 2%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 #services .service {
+  flex: 1;
+  flex-grow: 1;
+  flex-basis: 10rem;
   padding: 1rem;
-  width: 18%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +133,10 @@ button:hover {
   box-shadow: 0rem 0rem 1rem #089da1;
   text-align: center;
 }
-#services .service .fa-solid {
+#services .service h2 {
+  font-size: 1.4rem;
+}
+#services .service i {
   color: #089da1;
   font-size: 3.5rem;
 }
@@ -134,7 +160,6 @@ button:hover {
   font-size: small;
 }
 #aboutUs .aboutUsText .aboutUsBtn {
-  width: 20%;
   padding: 0.3rem;
   background-color: var(--mainColor);
   border: none;
@@ -146,7 +171,7 @@ button:hover {
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 3rem;
-  font-size: 3.8rem;
+  font-size: 3rem;
 }
 #featuredBooks #scrollableContainer {
   display: flex;
@@ -228,6 +253,7 @@ button:hover {
 #newArrivals h1 {
   text-align: center;
   margin: 3%;
+  font-size: 3rem;
 }
 #newArrivals .newArrivalsCardsContainer {
   display: flex;
@@ -250,14 +276,24 @@ button:hover {
 }
 #newArrivals .newArrivalsCardsContainer .newArrivalsCard .cardImage {
   width: 80%;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 0 0 0.1rem black;
+  overflow: hidden;
+}
+#newArrivals .newArrivalsCardsContainer .newArrivalsCard .cardImage img {
+  height: 100%;
+  transition: tranform 2s ease-in;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#newArrivals .newArrivalsCardsContainer .newArrivalsCard .cardImage img:hover {
+  transform: scale(1.1);
 }
 #newArrivals .newArrivalsCardsContainer .newArrivalsCard .cardStars i {
   color: var(--mainColor);
 }
 #newArrivals .newArrivalsCardsContainer .newArrivalsCard .newArrivalsBtn {
   background-color: white;
-  border: 2px solid var(--mainColor);
+  border: 0.16rem solid var(--mainColor);
   padding: 3%;
   color: black;
 }
@@ -270,6 +306,10 @@ button:hover {
   gap: 3rem;
   /*reviewsCardsContainer*/
 }
+#reviews h1 {
+  text-align: center;
+  font-size: 3rem;
+}
 #reviews .reviewsCardsContainer {
   display: flex;
   flex-direction: row;
@@ -280,7 +320,7 @@ button:hover {
 }
 #reviews .reviewsCardsContainer .reviewsCard {
   width: 20%;
-  box-shadow: 0.5px 0.5px 8px var(--mainColor);
+  box-shadow: 0rem 0rem 1rem #089da1;
   padding: 1%;
   /*cardTop*/
   /*cardBottom*/
@@ -298,8 +338,7 @@ button:hover {
 }
 #reviews .reviewsCardsContainer .reviewsCard .cardTop .quotation i {
   color: #eaeaea;
-  width: 100px;
-  font-size: 6rem;
+  font-size: 5rem;
 }
 #reviews .reviewsCardsContainer .reviewsCard .cardBottom {
   margin-bottom: 8%;
@@ -326,8 +365,8 @@ button:hover {
 }
 #banner button {
   position: absolute;
-  bottom: 7rem;
-  left: 7.5rem;
+  top: 65%;
+  left: 7%;
 }
 
 #ourBlog {
@@ -337,6 +376,7 @@ button:hover {
 #ourBlog h1 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 3rem;
 }
 #ourBlog .ourBlogCardsContainer {
   display: flex;
@@ -346,12 +386,16 @@ button:hover {
 }
 #ourBlog .ourBlogCardsContainer .ourBlogCard {
   width: 25%;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 0 0 1rem black;
   height: 27rem;
   /*blogCardText*/
 }
 #ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardImage {
   height: 60%;
+}
+#ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardImage img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardText {
   display: flex;
@@ -442,4 +486,112 @@ footer #footerBottomSection p i {
 }
 footer #footerBottomSection p span {
   color: #089da1;
+}
+
+@media screen and (max-width: 1025px) {
+  #welcome {
+    flex-direction: column;
+    height: auto;
+  }
+  #welcome #welcomeSection1 {
+    margin-top: 15rem;
+  }
+  #newArrivals .newArrivalsCardsContainer .newArrivalsCard {
+    width: 20%;
+  }
+  #reviews .reviewsCardsContainer .reviewsCard {
+    width: 35%;
+    margin: 1rem;
+  }
+  #ourBlog .ourBlogCardsContainer .ourBlogCard {
+    width: 45%;
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 415px) {
+  header .navigation {
+    display: none;
+  }
+  header .sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(8, 156, 161, 0.1803921569);
+    -webkit-backdrop-filter: blur(0.5rem);
+            backdrop-filter: blur(0.5rem);
+  }
+  header .sidebar i {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  header .sidebar a {
+    text-decoration: none;
+    color: black;
+  }
+  header .menuButton {
+    display: block;
+    order: 3;
+  }
+  header .logo {
+    order: 1;
+  }
+  header .searchFavIcon {
+    order: 2;
+  }
+  #welcome #welcomeSection1 {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  #welcome #welcomeSection1 #welcomeTitle {
+    font-size: 2.8rem;
+  }
+  #welcome #welcomeSection1 #welcomeText {
+    width: 85%;
+    text-align: center;
+  }
+  #aboutUs {
+    flex-direction: column;
+  }
+  #aboutUs .aboutUsText {
+    justify-content: center;
+    align-items: center;
+  }
+  #aboutUs .aboutUsText p {
+    text-align: center;
+  }
+  #aboutUs .aboutUsImage,
+  #aboutUs .aboutUsText {
+    width: 90%;
+    padding: 1rem;
+  }
+  #newArrivals .newArrivalsCardsContainer .newArrivalsCard {
+    width: 80%;
+  }
+  #reviews .reviewsCardsContainer .reviewsCard {
+    width: 90%;
+    margin: 1rem;
+  }
+  #banner {
+    background-size: 200%;
+    aspect-ratio: 1920/1000;
+  }
+  #banner button {
+    height: 2rem;
+    width: 6rem;
+    font-size: 0.7rem;
+    top: 70%;
+    left: 35%;
+  }
+  #ourBlog .ourBlogCardsContainer .ourBlogCard {
+    width: 90%;
+    margin: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
