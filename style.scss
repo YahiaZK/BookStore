@@ -78,11 +78,12 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
-    .fa-magnifying-glass:hover {
-      cursor: pointer;
+    i{
+      transition: 0.15s;
     }
-    .fa-heart {
+    i:hover{
       cursor: pointer;
+      color: $primary-color;
     }
   }
 }
@@ -146,10 +147,17 @@ button {
   height: 2.5rem;
   width: 8rem;
   font-size: 1.1rem;
+  user-select: none;
+  transition: 0.15s;
 }
 button:hover {
   cursor: pointer;
+  color: $primary-color;
+  border: solid 0.1rem $primary-color;
+  box-shadow: 0rem 0rem 0.5rem $primary-color;
+  background-color: white;
 }
+
 
 #services {
   margin: 5% 2% 2% 2%;
@@ -172,6 +180,8 @@ button:hover {
     border: none;
     box-shadow: 0rem 0rem 1rem $primary-color;
     text-align: center;
+    background-color: white;
+    transition: 0.15s;
     
     h2{
       font-size: 1.4rem;
@@ -180,6 +190,13 @@ button:hover {
     i{
       color: $primary-color;
       font-size: 3.5rem;
+    }
+  }
+
+  .service:hover{
+    background-color: $primary-color;
+    i, h2, p{
+      color: white;
     }
   }
 }
@@ -205,8 +222,8 @@ button:hover {
     }
 
 
-  } /*aboutUsText*/
-} /*aboutUs*/
+  } 
+} 
 
 #featuredBooks {
   h1 {
@@ -260,23 +277,22 @@ button:hover {
           font-weight: normal;
         }
       }
-      button {
-        color: black;
-        background-color: white;
-        border: solid 0.16rem $primary-color;
-        padding: 0.5rem;
-        height: 2.5rem;
-        width: 8rem;
-        font-size: 1.1rem;
-      }
-      button:hover {
-        cursor: pointer;
-      }
     }
     .bookContainer:hover {
       box-shadow: 0 0 0.3rem $primary-color;
     }
   }
+}
+
+.buttonNoBackground{
+  color: black;
+  background-color: white;
+  border: solid 0.16rem $primary-color;
+}
+
+.buttonNoBackground:hover{
+  background-color: $primary-color;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -347,9 +363,9 @@ button:hover {
         padding: 3%;
         color: black;
       }
-    } /*newArrivalsCard*/
-  } /*newArrivalsCardsContaner*/
-} /*newArrivals*/
+    } 
+  } 
+} 
 
 #reviews {
   margin-top: 10%;
@@ -375,6 +391,7 @@ button:hover {
       width: 20%;
       box-shadow: 0rem 0rem 1rem $primary-color;
       padding: 1%;
+      transition: 0.15s;
 
       .cardTop {
         display: flex;
@@ -408,9 +425,23 @@ button:hover {
           }
         }
       } /*cardBottom*/
-    } /*reviewsCard*/
-  } /*reviewsCardsContainer*/
-} /*reviews*/
+    } 
+
+    .reviewsCard:hover{
+      background-color: $primary-color;
+      .cardTop{
+        h3{
+          color: white;
+        }
+      }
+      .cardBottom{
+        p, i{
+          color: white;
+        }
+      }
+    }
+  }
+} 
 
 #banner {
   margin-top: 5%;
@@ -444,8 +475,9 @@ button:hover {
 
     .ourBlogCard {
       width: 25%;
-      box-shadow: 0 0 1rem black;
+      box-shadow: 0 0 0.3rem black;
       height: 27rem;
+      transition: 0.15s;
 
       .blogCardImage {
         height: 60%;
@@ -474,10 +506,19 @@ button:hover {
           color: $primary-color;
           margin-bottom: 1rem;
         }
-      } /*blogCardText*/
-    } /*ourBlogCard*/
-  } /*ourBlogCardsContainer*/
-} /*ourBlog*/
+      } 
+    } 
+
+    .ourBlogCard:hover{
+      background-color: $primary-color;
+      box-shadow: 0 0 1rem $primary-color;
+      h3, p, i{
+        color: white;
+      }
+
+    }
+  }
+} 
 
 footer {
   margin-top: 2rem;
@@ -518,6 +559,11 @@ footer {
         text-decoration: none;
         display: block;
         margin-bottom: 0.4rem;
+        transition: 0.15s;
+      }
+
+      a:hover{
+        color: $primary-color;
       }
     }
 
@@ -535,10 +581,12 @@ footer {
     #followUs {
       i {
         margin-right: 0.4rem;
+        transition: 0.15s;
       }
 
       i:hover {
         cursor: pointer;
+        color: $primary-color;
       }
     }
 
@@ -572,6 +620,9 @@ footer {
     }
   }
 }
+
+
+
 
 // responsive section
 

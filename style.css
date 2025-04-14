@@ -66,11 +66,12 @@ header .searchFavIcon {
   justify-content: space-between;
   gap: 0.5rem;
 }
-header .searchFavIcon .fa-magnifying-glass:hover {
-  cursor: pointer;
+header .searchFavIcon i {
+  transition: 0.15s;
 }
-header .searchFavIcon .fa-heart {
+header .searchFavIcon i:hover {
   cursor: pointer;
+  color: #089da1;
 }
 
 #welcome {
@@ -122,10 +123,18 @@ button {
   height: 2.5rem;
   width: 8rem;
   font-size: 1.1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.15s;
 }
 
 button:hover {
   cursor: pointer;
+  color: #089da1;
+  border: solid 0.1rem #089da1;
+  box-shadow: 0rem 0rem 0.5rem #089da1;
+  background-color: white;
 }
 
 #services {
@@ -149,6 +158,8 @@ button:hover {
   border: none;
   box-shadow: 0rem 0rem 1rem #089da1;
   text-align: center;
+  background-color: white;
+  transition: 0.15s;
 }
 #services .service h2 {
   font-size: 1.4rem;
@@ -157,11 +168,16 @@ button:hover {
   color: #089da1;
   font-size: 3.5rem;
 }
+#services .service:hover {
+  background-color: #089da1;
+}
+#services .service:hover i, #services .service:hover h2, #services .service:hover p {
+  color: white;
+}
 
 #aboutUs {
   display: flex;
   justify-content: space-around;
-  /*aboutUsText*/
 }
 #aboutUs .aboutUsImage {
   width: 40%;
@@ -177,7 +193,6 @@ button:hover {
   font-size: small;
 }
 
-/*aboutUs*/
 #featuredBooks h1 {
   text-align: center;
   margin-top: 5rem;
@@ -227,20 +242,19 @@ button:hover {
 #featuredBooks #scrollableContainer .bookContainer .discount sub {
   font-weight: normal;
 }
-#featuredBooks #scrollableContainer .bookContainer button {
+#featuredBooks #scrollableContainer .bookContainer:hover {
+  box-shadow: 0 0 0.3rem #089da1;
+}
+
+.buttonNoBackground {
   color: black;
   background-color: white;
   border: solid 0.16rem #089da1;
-  padding: 0.5rem;
-  height: 2.5rem;
-  width: 8rem;
-  font-size: 1.1rem;
 }
-#featuredBooks #scrollableContainer .bookContainer button:hover {
-  cursor: pointer;
-}
-#featuredBooks #scrollableContainer .bookContainer:hover {
-  box-shadow: 0 0 0.3rem #089da1;
+
+.buttonNoBackground:hover {
+  background-color: #089da1;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -260,7 +274,6 @@ button:hover {
 
 #newArrivals {
   margin-top: 15%;
-  /*newArrivalsCardsContaner*/
 }
 #newArrivals h1 {
   text-align: center;
@@ -275,7 +288,6 @@ button:hover {
   margin-left: 2%;
   margin: 0% 2% 5% 2%;
   justify-content: center;
-  /*newArrivalsCard*/
 }
 #newArrivals .newArrivalsCardsContainer .newArrivalsCard {
   border: 0.1rem solid #919191;
@@ -310,14 +322,12 @@ button:hover {
   color: black;
 }
 
-/*newArrivals*/
 #reviews {
   margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  /*reviewsCardsContainer*/
 }
 #reviews h1 {
   text-align: center;
@@ -329,12 +339,12 @@ button:hover {
   flex-wrap: wrap;
   gap: 1.5%;
   justify-content: center;
-  /*reviewsCard*/
 }
 #reviews .reviewsCardsContainer .reviewsCard {
   width: 20%;
   box-shadow: 0rem 0rem 1rem #089da1;
   padding: 1%;
+  transition: 0.15s;
   /*cardTop*/
   /*cardBottom*/
 }
@@ -365,8 +375,16 @@ button:hover {
 #reviews .reviewsCardsContainer .reviewsCard .cardBottom .cardStars i {
   color: #089da1;
 }
+#reviews .reviewsCardsContainer .reviewsCard:hover {
+  background-color: #089da1;
+}
+#reviews .reviewsCardsContainer .reviewsCard:hover .cardTop h3 {
+  color: white;
+}
+#reviews .reviewsCardsContainer .reviewsCard:hover .cardBottom p, #reviews .reviewsCardsContainer .reviewsCard:hover .cardBottom i {
+  color: white;
+}
 
-/*reviews*/
 #banner {
   margin-top: 5%;
   background-image: url(assets/banner.jpg);
@@ -384,7 +402,6 @@ button:hover {
 
 #ourBlog {
   padding: 1%;
-  /*ourBlogCardsContainer*/
 }
 #ourBlog h1 {
   text-align: center;
@@ -395,13 +412,12 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /*ourBlogCard*/
 }
 #ourBlog .ourBlogCardsContainer .ourBlogCard {
   width: 25%;
-  box-shadow: 0 0 1rem black;
+  box-shadow: 0 0 0.3rem black;
   height: 27rem;
-  /*blogCardText*/
+  transition: 0.15s;
 }
 #ourBlog .ourBlogCardsContainer .ourBlogCard .blogCardImage {
   height: 60%;
@@ -428,8 +444,14 @@ button:hover {
   color: #089da1;
   margin-bottom: 1rem;
 }
+#ourBlog .ourBlogCardsContainer .ourBlogCard:hover {
+  background-color: #089da1;
+  box-shadow: 0 0 1rem #089da1;
+}
+#ourBlog .ourBlogCardsContainer .ourBlogCard:hover h3, #ourBlog .ourBlogCardsContainer .ourBlogCard:hover p, #ourBlog .ourBlogCardsContainer .ourBlogCard:hover i {
+  color: white;
+}
 
-/*ourBlog*/
 footer {
   margin-top: 2rem;
   background-color: #eaeaea;
@@ -464,6 +486,10 @@ footer #footerTopSection #quickLink a {
   text-decoration: none;
   display: block;
   margin-bottom: 0.4rem;
+  transition: 0.15s;
+}
+footer #footerTopSection #quickLink a:hover {
+  color: #089da1;
 }
 footer #footerTopSection #contactInfo .contactBox {
   display: flex;
@@ -475,9 +501,11 @@ footer #footerTopSection #contactInfo i {
 }
 footer #footerTopSection #followUs i {
   margin-right: 0.4rem;
+  transition: 0.15s;
 }
 footer #footerTopSection #followUs i:hover {
   cursor: pointer;
+  color: #089da1;
 }
 footer #footerTopSection #newsletter input {
   display: block;
