@@ -1,136 +1,153 @@
-
-
 $primary-color: #089da1;
 $secondary-color: #c0c0c0;
 $footer-background-color: #eaeaea;
 $input-box-color: #cacaca;
-  
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
   --mainColor: #089da1;
 }
-  
+
 header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0rem 0rem 1rem $primary-color;
-    padding: 1%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0rem 0rem 1rem $primary-color;
+  padding: 1%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
 
-  
-
-  
-    .logo {
-      height: 2rem;
-      width: auto;
-
-      user-select: none;
-    }
-  
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-      gap: 2.1rem;
-      a {
-        color: black;
-        text-decoration: none;
-        font-size: 1rem;
-      }
-    }
-    .searchFavIcon {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-      .fa-magnifying-glass:hover{
-        cursor: pointer;
-      }
-      .fa-heart{
-        cursor: pointer;
-      }
-    }
-}
-  
-#welcome {
+  .logo {
+    height: 2rem;
     width: auto;
-    height: 100vh;
-    background-image: url(assets/bg.png);
-    background-size: cover;
-    background-position: center;
+    user-select: none;
+  }
+
+  .navigation {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    #welcomeSection1 {
-      padding-left: 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 4.2rem;
-      #welcomeTitle {
-        font-size: 3.5rem;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      #welcomeTitleColored {
-        color: $primary-color;
-      }
-  
-      #welcomeText {
-        font-size: 1.4rem;
-      }
-  
-      
+    justify-content: space-between;
+    gap: 2.1rem;
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 1rem;
     }
+  }
+  .searchFavIcon {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    .fa-magnifying-glass:hover {
+      cursor: pointer;
+    }
+    .fa-heart {
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+#welcome {
+  width: auto;
+  height: 100vh;
+  // margin-top: 5rem;
+  background-image: url(assets/bg.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-wrap: wrap;
+  
+
+  .items{
+    flex-grow: 1;
+  }
+  #welcomeSection1 {
+    padding-left: 3rem;
+    padding-right: 0.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4.2rem;
+    #welcomeTitle {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    #welcomeTitleColored {
+      color: $primary-color;
+    }
+
+    #welcomeText {
+      font-size: 1.4rem;
+    }
+  }
+
+  #welcomeSection2{
+    flex: 1;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
 }
 
 button {
-    color: white;
-    background-color: $primary-color;
-    padding: 0.5rem;
-    border: none;
-    height: 2.5rem;
-    width: 8rem;
-    font-size: 1.1rem;
-  }
-  button:hover {
-    cursor: pointer;
-  }
-
-#services{
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    .service{
-        padding: 1rem;
-        width: 18%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
-        border: none;
-        box-shadow: 0rem 0rem 1rem $primary-color;
-        text-align: center;
-
-        .fa-solid{
-            color: $primary-color;
-            font-size: 3.5rem;
-        }
-    }
+  color: white;
+  background-color: $primary-color;
+  padding: 0.5rem;
+  border: none;
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 1.1rem;
+}
+button:hover {
+  cursor: pointer;
 }
 
+#services {
+  margin: 5% 2% 2% 2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  .service {
+    flex: 1;
+    flex-grow: 1;
+    flex-basis: 10rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+    box-shadow: 0rem 0rem 1rem $primary-color;
+    text-align: center;
+    
+    h2{
+      font-size: 1.4rem;
+    }
+
+    i{
+      color: $primary-color;
+      font-size: 3.5rem;
+    }
+  }
+}
 
 #aboutUs {
   display: flex;
@@ -160,106 +177,97 @@ button {
   } /*aboutUsText*/
 } /*aboutUs*/
 
+#featuredBooks {
+  h1 {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  }
 
-#featuredBooks{
+  #scrollableContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.7rem;
+    overflow-x: scroll;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    scroll-behavior: smooth;
+    margin-left: 3rem;
+    margin-right: 3rem;
 
-    h1{
-        text-align: center;
-        margin-top: 5rem;
-        margin-bottom: 3rem;
-        font-size: 3.8rem;
+    .bookContainer {
+      border: solid 0.1rem gray;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.4rem;
+      flex-shrink: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
 
+      .bookCover {
+        width: 7.5em;
+        height: 11.4em;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+      .authorName {
+        color: $secondary-color;
+      }
+      .bookType {
+        color: $primary-color;
+      }
+      .discount {
+        font-weight: bold;
+        sub {
+          font-weight: normal;
+        }
+      }
+      button {
+        color: black;
+        background-color: white;
+        border: solid 0.16rem $primary-color;
+        padding: 0.5rem;
+        height: 2.5rem;
+        width: 8rem;
+        font-size: 1.1rem;
+      }
+      button:hover {
+        cursor: pointer;
+      }
     }
-
-    
-
-    #scrollableContainer{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2.7rem;
-        overflow-x: scroll;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        scroll-behavior: smooth;
-        margin-left: 3rem;
-        margin-right: 3rem;
-
-        .bookContainer{
-            border: solid 0.1rem gray;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 0.4rem;
-            flex-shrink: 0;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-
-            .bookCover{
-                width: 7.5em;     
-                height: 11.4em;  
-                
-            }
-
-            h2{
-                font-size: 1.4rem;
-            }
-            .authorName{
-                color: $secondary-color;
-            }
-            .bookType{
-                color: $primary-color;
-            }
-            .discount{
-                font-weight: bold;
-                sub{
-                    font-weight: normal;
-                }
-            }
-            button{
-                color: black;
-                background-color: white;
-                border: solid 0.16rem $primary-color;
-                padding: 0.5rem;
-                height: 2.5rem;
-                width: 8rem;
-                font-size: 1.1rem;
-            }
-            button:hover{
-                cursor: pointer;
-            }
-
-        }
-        .bookContainer:hover{
-            box-shadow: 0 0 0.3rem $primary-color;
-        }
-    }   
-
-    
-
+    .bookContainer:hover {
+      box-shadow: 0 0 0.3rem $primary-color;
+    }
+  }
 }
 
-::-webkit-scrollbar{
-    width: 0.8rem;
-    height: 0.5rem;
-    background-color: rgb(234, 234, 234);
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.5rem;
+  background-color: rgb(234, 234, 234);
 }
 
-::-webkit-scrollbar-button{
-    display: none;
+::-webkit-scrollbar-button {
+  display: none;
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: $primary-color;
-    border-radius: 1rem;
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 1rem;
 }
 
 #newArrivals {
   h1 {
     text-align: center;
     margin: 3%;
+    font-size: 3rem;
   }
   .newArrivalsCardsContainer {
     display: flex;
@@ -281,16 +289,16 @@ button {
 
       .cardImage {
         width: 80%;
-        box-shadow: 1px 1px 5px black;
+        box-shadow: 0 0 0.1rem black;
         overflow: hidden;
 
-        img{
+        img {
           height: 100%;
           transition: tranform 2s ease-in;
           object-fit: cover;
         }
 
-        img:hover{
+        img:hover {
           transform: scale(1.1);
         }
       }
@@ -303,7 +311,7 @@ button {
 
       .newArrivalsBtn {
         background-color: white;
-        border: 2px solid var(--mainColor);
+        border: 0.16rem solid var(--mainColor);
         padding: 3%;
         color: black;
       }
@@ -311,12 +319,16 @@ button {
   } /*newArrivalsCardsContaner*/
 } /*newArrivals*/
 
-  
 #reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
 
   .reviewsCardsContainer {
     display: flex;
@@ -327,7 +339,7 @@ button {
 
     .reviewsCard {
       width: 20%;
-      box-shadow: 0.5px 0.5px 8px var(--mainColor);
+      box-shadow: 0rem 0rem 1rem $primary-color;
       padding: 1%;
 
       .cardTop {
@@ -345,8 +357,7 @@ button {
           width: 35%;
           i {
             color: #eaeaea;
-            width: 100px;
-            font-size: 6rem;
+            font-size: 5rem;
           }
         }
       } /*cardTop*/
@@ -367,23 +378,22 @@ button {
   } /*reviewsCardsContainer*/
 } /*reviews*/
 
-#banner{
-    margin-top: 2rem;
-    background-image: url(assets/banner.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%; 
-    aspect-ratio: 1920 / 505;
-    position: relative;
-    
-    button{
-        position: absolute;
-        bottom: 7rem;
-        left: 7.5rem;
-        
-    }
+#banner {
+  margin-top: 2rem;
+  background-image: url(assets/banner.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 1920 / 505;
+  position: relative;
+  
+  
+  button {
+    position: absolute;
+    top: 65%; 
+    left: 7%;
+  }
 }
-
 
 #ourBlog {
   padding: 1%;
@@ -391,6 +401,7 @@ button {
   h1 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 3rem;
   }
   .ourBlogCardsContainer {
     display: flex;
@@ -399,24 +410,24 @@ button {
 
     .ourBlogCard {
       width: 25%;
-      box-shadow: 1px 1px 5px black;
-      height:27rem;
+      box-shadow: 0 0 1rem black;
+      height: 27rem;
 
-      .blogCardImage{
+      .blogCardImage {
         height: 60%;
 
-        img{
+        img {
           object-fit: cover;
         }
-      }        
+      }
 
-      .blogCardText{
+      .blogCardText {
         display: flex;
         flex-direction: column;
         gap: 0.7rem;
         padding: 3%;
 
-        h3{
+        h3 {
           color: var(--mainColor);
         }
 
@@ -429,86 +440,76 @@ button {
           color: var(--mainColor);
           margin-bottom: 1rem;
         }
-      
       } /*blogCardText*/
     } /*ourBlogCard*/
   } /*ourBlogCardsContainer*/
 } /*ourBlog*/
 
-footer{
+footer {
   margin-top: 2rem;
   background-color: $footer-background-color;
   padding: 2rem;
 
-  #footerTopSection{
+  #footerTopSection {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
 
-    .box{
+    .box {
       flex: 1;
-      
     }
 
-    #footersLogoText{
-
-
-      img{
+    #footersLogoText {
+      img {
         width: 6rem;
         user-select: none;
         margin-bottom: 1rem;
       }
 
-      p{
+      p {
         font-size: 0.9em;
       }
-
     }
 
-    h2{
+    h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
 
-    #quickLink{
-
-      a{
+    #quickLink {
+      a {
         color: black;
         text-decoration: none;
         display: block;
         margin-bottom: 0.4rem;
-
       }
     }
 
-    #contactInfo{
-
-      .contactBox{
+    #contactInfo {
+      .contactBox {
         display: flex;
         align-items: center;
         margin-bottom: 0.8rem;
       }
-      i{
+      i {
         margin-right: 0.4rem;
       }
-
     }
 
-    #followUs{
-      i{
+    #followUs {
+      i {
         margin-right: 0.4rem;
       }
 
-      i:hover{
+      i:hover {
         cursor: pointer;
       }
     }
 
-    #newsletter{
-      
-      input{
+    #newsletter {
+      input {
         display: block;
         margin-bottom: 1rem;
         border: none;
@@ -516,100 +517,108 @@ footer{
         border-radius: 1rem;
         width: 15rem;
         padding: 0.5rem;
-        
       }
 
-      button{
+      button {
         border-radius: 1.5rem;
       }
     }
-
-
-
-
   }
 
-  #footerBottomSection{
-    p{
+  #footerBottomSection {
+    p {
       text-align: center;
-      
-      i{
+
+      i {
         color: $primary-color;
       }
-      span{
+      span {
         color: $primary-color;
       }
     }
   }
-
-
 }
 
 // responsive section
 
-@media screen and ( max-width: 414px) {
-  #aboutUs{
+// IPad pro 
+@media screen and (max-width: 1025px) {
+  
+  #welcome{
     flex-direction: column;
-
-    .aboutUsImage, .aboutUsText{
-      width: 90%;
-      padding: 1rem;
+    height: auto;
+    #welcomeSection1{
+      margin-top: 15rem;
     }
   }
 
-  #newArrivals{
-    .newArrivalsCardsContainer{
-      .newArrivalsCard{
-        width: 80%;
-      }
-    }
-  }
 
-  #reviews{
-    .reviewsCardsContainer{
-      .reviewsCard{
-        width: 90%;
-        margin: 1rem;
-      }
-    }
-  }
-
-  #ourBlog{
-    .ourBlogCardsContainer{
-      .ourBlogCard{
-        width: 90%;
-        margin: 1rem;
-      }
-    }
-  }
-
-}
-
-@media screen and (min-width: 481px) and (max-width: 1024px){
-  #newArrivals{
-    .newArrivalsCardsContainer{
-      .newArrivalsCard{
+  #newArrivals {
+    .newArrivalsCardsContainer {
+      .newArrivalsCard {
         width: 20%;
       }
     }
   }
 
-  #reviews{
-    .reviewsCardsContainer{
-      .reviewsCard{
+  #reviews {
+    .reviewsCardsContainer {
+      .reviewsCard {
         width: 35%;
         margin: 1rem;
       }
     }
   }
 
-  #ourBlog{
-    .ourBlogCardsContainer{
-      .ourBlogCard{
+  #ourBlog {
+    .ourBlogCardsContainer {
+      .ourBlogCard {
         width: 45%;
         margin: 1rem;
       }
     }
   }
-
 }
+
+//IPone XR
+@media screen and (max-width: 414px) {
+  
+
+  #aboutUs {
+    flex-direction: column;
+
+    .aboutUsImage,
+    .aboutUsText {
+      width: 90%;
+      padding: 1rem;
+    }
+  }
+
+  #newArrivals {
+    .newArrivalsCardsContainer {
+      .newArrivalsCard {
+        width: 80%;
+      }
+    }
+  }
+
+  #reviews {
+    .reviewsCardsContainer {
+      .reviewsCard {
+        width: 90%;
+        margin: 1rem;
+      }
+    }
+  }
+
+  #ourBlog {
+    .ourBlogCardsContainer {
+      .ourBlogCard {
+        width: 90%;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+
