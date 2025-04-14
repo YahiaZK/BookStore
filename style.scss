@@ -9,9 +9,11 @@ $input-box-color: #cacaca;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --mainColor: #089da1;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10%;
 }
+
 
 header {
   display: flex;
@@ -30,7 +32,9 @@ header {
     height: 2rem;
     width: auto;
     user-select: none;
+    
   }
+
 
   .navigation {
     display: flex;
@@ -40,7 +44,26 @@ header {
       color: black;
       text-decoration: none;
       font-size: 1rem;
+      position: relative;
     }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: $primary-color;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    }
+    
+    a:hover::after {
+      transform: scaleX(1);
+    }
+
   }
 
   .sidebar{
@@ -67,6 +90,7 @@ header {
 
 
 #welcome {
+
   width: auto;
   height: 100vh;
   // margin-top: 5rem;
@@ -163,6 +187,7 @@ button:hover {
 #aboutUs {
   display: flex;
   justify-content: space-around;
+  
 
   .aboutUsImage {
     width: 40%;
@@ -179,12 +204,7 @@ button:hover {
       font-size: small;
     }
 
-    .aboutUsBtn {
-      padding: 0.3rem;
-      background-color: var(--mainColor);
-      border: none;
-      color: white;
-    }
+
   } /*aboutUsText*/
 } /*aboutUs*/
 
@@ -275,6 +295,7 @@ button:hover {
 }
 
 #newArrivals {
+  margin-top: 15%;
   h1 {
     text-align: center;
     margin: 3%;
@@ -316,13 +337,13 @@ button:hover {
 
       .cardStars {
         i {
-          color: var(--mainColor);
+          color: $primary-color;
         }
       }
 
       .newArrivalsBtn {
         background-color: white;
-        border: 0.16rem solid var(--mainColor);
+        border: 0.16rem solid $primary-color;
         padding: 3%;
         color: black;
       }
@@ -331,10 +352,12 @@ button:hover {
 } /*newArrivals*/
 
 #reviews {
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+
 
   h1 {
     text-align: center;
@@ -381,7 +404,7 @@ button:hover {
         .cardStars {
           margin-top: 2%;
           i {
-            color: var(--mainColor);
+            color: $primary-color;
           }
         }
       } /*cardBottom*/
@@ -390,7 +413,7 @@ button:hover {
 } /*reviews*/
 
 #banner {
-  margin-top: 2rem;
+  margin-top: 5%;
   background-image: url(assets/banner.jpg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -439,7 +462,7 @@ button:hover {
         padding: 3%;
 
         h3 {
-          color: var(--mainColor);
+          color: $primary-color;
         }
 
         p {
@@ -448,7 +471,7 @@ button:hover {
         .blogIcons {
           display: flex;
           justify-content: space-between;
-          color: var(--mainColor);
+          color: $primary-color;
           margin-bottom: 1rem;
         }
       } /*blogCardText*/
@@ -611,13 +634,14 @@ footer {
       align-items: center;
       flex-direction: column;
       gap: 2rem;
-      background-color: #089ca12e ;
+      background-color: #acb0b02e ;
       backdrop-filter: blur(0.5rem);
       
       
       i{
         font-size: 2rem;
         margin-top: 3rem;
+        color: $primary-color;
       }
 
       a{
