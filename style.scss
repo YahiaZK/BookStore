@@ -24,6 +24,7 @@ header {
   right: 0;
   left: 0;
   background-color: white;
+  z-index: 999;
 
   .logo {
     height: 2rem;
@@ -41,6 +42,15 @@ header {
       font-size: 1rem;
     }
   }
+
+  .sidebar{
+    display: none;
+  }
+
+  .menuButton{
+    display: none;
+  }
+
   .searchFavIcon {
     display: flex;
     justify-content: space-between;
@@ -96,6 +106,7 @@ header {
   #welcomeSection2{
     flex: 1;
     img{
+      margin-top: 2rem;
       width: 100%;
       height: auto;
     }
@@ -580,18 +591,87 @@ footer {
   }
 }
 
-//IPone XR
-@media screen and (max-width: 414px) {
+//Ipone XR
+@media screen and (max-width: 415px) {
   
+
+  header{
+    .navigation{
+      display: none;
+    }
+
+    .sidebar{
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      display: none;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: #089ca12e ;
+      backdrop-filter: blur(0.5rem);
+      
+      
+      i{
+        font-size: 2rem;
+        margin-top: 3rem;
+      }
+
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .menuButton{
+      display: block;
+      order: 3;
+    }
+    .logo{
+      order: 1;
+    }
+    .searchFavIcon{
+      order: 2;
+    }
+
+
+  }
+
+  #welcome{
+    #welcomeSection1{
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      #welcomeTitle{
+        font-size: 2.8rem;
+      }
+      #welcomeText{
+        width: 85%;
+        text-align: center;
+      }
+    }
+  }
 
   #aboutUs {
     flex-direction: column;
+    
+    .aboutUsText{
+      justify-content: center;
+      align-items: center;
+      p{
+        text-align: center;
+      }
+    }
 
     .aboutUsImage,
     .aboutUsText {
       width: 90%;
       padding: 1rem;
     }
+    
   }
 
   #newArrivals {
@@ -608,6 +688,20 @@ footer {
         width: 90%;
         margin: 1rem;
       }
+    }
+  }
+
+  #banner{
+
+    background-size: 200%;
+    aspect-ratio: 1920 / 1000;
+    
+    button{
+      height: 2rem;
+      width: 6rem;
+      font-size: 0.7rem;
+      top: 70%; 
+      left: 35%;
     }
   }
 
