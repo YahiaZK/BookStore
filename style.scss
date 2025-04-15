@@ -1,140 +1,210 @@
-
-
 $primary-color: #089da1;
 $secondary-color: #c0c0c0;
 $footer-background-color: #eaeaea;
 $input-box-color: #cacaca;
-  
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --mainColor: #089da1;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10%;
 }
-  
+
+
 header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0rem 0rem 1rem $primary-color;
-    padding: 1%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0rem 0rem 1rem $primary-color;
+  padding: 1%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
 
-  
-
-  
-    .logo {
-      height: 2rem;
-      width: auto;
-
-      user-select: none;
-    }
-  
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-      gap: 2.1rem;
-      a {
-        color: black;
-        text-decoration: none;
-        font-size: 1rem;
-      }
-    }
-    .searchFavIcon {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-      .fa-magnifying-glass:hover{
-        cursor: pointer;
-      }
-      .fa-heart{
-        cursor: pointer;
-      }
-    }
-}
-  
-#welcome {
+  .logo {
+    height: 2rem;
     width: auto;
-    height: 100vh;
-    background-image: url(assets/bg.png);
-    background-size: cover;
-    background-position: center;
+    user-select: none;
+    
+  }
+
+
+  .navigation {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    #welcomeSection1 {
-      padding-left: 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 4.2rem;
-      #welcomeTitle {
-        font-size: 3.5rem;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      #welcomeTitleColored {
-        color: $primary-color;
-      }
-  
-      #welcomeText {
-        font-size: 1.4rem;
-      }
-  
-      
+    justify-content: space-between;
+    gap: 2.1rem;
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
     }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: $primary-color;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    }
+    
+    a:hover::after {
+      transform: scaleX(1);
+    }
+
+  }
+
+  .sidebar{
+    display: none;
+  }
+
+  .menuButton{
+    display: none;
+  }
+
+  .searchFavIcon {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    i{
+      transition: 0.15s;
+    }
+    i:hover{
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+}
+
+
+
+#welcome {
+
+  width: auto;
+  height: 100vh;
+  // margin-top: 5rem;
+  background-image: url(assets/bg.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-wrap: wrap;
+  
+
+  .items{
+    flex-grow: 1;
+  }
+  #welcomeSection1 {
+    padding-left: 3rem;
+    padding-right: 0.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4.2rem;
+    #welcomeTitle {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    #welcomeTitleColored {
+      color: $primary-color;
+    }
+
+    #welcomeText {
+      font-size: 1.4rem;
+    }
+  }
+
+  #welcomeSection2{
+    flex: 1;
+    img{
+      margin-top: 2rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+
 }
 
 button {
-    color: white;
-    background-color: $primary-color;
-    padding: 0.5rem;
-    border: none;
-    height: 2.5rem;
-    width: 8rem;
-    font-size: 1.1rem;
-  }
-  button:hover {
-    cursor: pointer;
-  }
-
-#services{
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    .service{
-        padding: 1rem;
-        width: 18%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
-        border: none;
-        box-shadow: 0rem 0rem 1rem $primary-color;
-        text-align: center;
-
-        .fa-solid{
-            color: $primary-color;
-            font-size: 3.5rem;
-        }
-    }
+  color: white;
+  background-color: $primary-color;
+  padding: 0.5rem;
+  border: none;
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 1.1rem;
+  user-select: none;
+  transition: 0.15s;
+}
+button:hover {
+  cursor: pointer;
+  color: $primary-color;
+  border: solid 0.1rem $primary-color;
+  box-shadow: 0rem 0rem 0.5rem $primary-color;
+  background-color: white;
 }
 
+
+#services {
+  margin: 5% 2% 2% 2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  .service {
+    flex: 1;
+    flex-grow: 1;
+    flex-basis: 10rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+    box-shadow: 0rem 0rem 1rem $primary-color;
+    text-align: center;
+    background-color: white;
+    transition: 0.15s;
+    
+    h2{
+      font-size: 1.4rem;
+    }
+
+    i{
+      color: $primary-color;
+      font-size: 3.5rem;
+    }
+  }
+
+  .service:hover{
+    background-color: $primary-color;
+    i, h2, p{
+      color: white;
+    }
+  }
+}
 
 #aboutUs {
   display: flex;
   justify-content: space-around;
+  
 
   .aboutUsImage {
     width: 40%;
@@ -151,116 +221,101 @@ button {
       font-size: small;
     }
 
-    .aboutUsBtn {
-      width: 20%;
-      padding: 0.3rem;
-      background-color: var(--mainColor);
-      border: none;
-      color: white;
-    }
-  } /*aboutUsText*/
-} /*aboutUs*/
 
+  } 
+} 
 
-#featuredBooks{
+#featuredBooks {
+  h1 {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  }
 
-    h1{
-        text-align: center;
-        margin-top: 5rem;
-        margin-bottom: 3rem;
-        font-size: 3.8rem;
+  #scrollableContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.7rem;
+    overflow-x: scroll;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    scroll-behavior: smooth;
+    margin-left: 3rem;
+    margin-right: 3rem;
 
-    }
+    .bookContainer {
+      border: solid 0.1rem gray;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.4rem;
+      flex-shrink: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
 
-    
+      .bookCover {
+        width: 7.5em;
+        height: 11.4em;
+      }
 
-    #scrollableContainer{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2.7rem;
-        overflow-x: scroll;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        scroll-behavior: smooth;
-        margin-left: 3rem;
-        margin-right: 3rem;
-
-        .bookContainer{
-            border: solid 0.1rem gray;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 0.4rem;
-            flex-shrink: 0;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-
-            .bookCover{
-                width: 7.5em;     
-                height: 11.4em;  
-                
-            }
-
-            h2{
-                font-size: 1.4rem;
-            }
-            .authorName{
-                color: $secondary-color;
-            }
-            .bookType{
-                color: $primary-color;
-            }
-            .discount{
-                font-weight: bold;
-                sub{
-                    font-weight: normal;
-                }
-            }
-            button{
-                color: black;
-                background-color: white;
-                border: solid 0.16rem $primary-color;
-                padding: 0.5rem;
-                height: 2.5rem;
-                width: 8rem;
-                font-size: 1.1rem;
-            }
-            button:hover{
-                cursor: pointer;
-            }
-
+      h2 {
+        font-size: 1.4rem;
+      }
+      .authorName {
+        color: $secondary-color;
+      }
+      .bookType {
+        color: $primary-color;
+      }
+      .discount {
+        font-weight: bold;
+        sub {
+          font-weight: normal;
         }
-        .bookContainer:hover{
-            box-shadow: 0 0 0.3rem $primary-color;
-        }
-    }   
-
-    
-
+      }
+    }
+    .bookContainer:hover {
+      box-shadow: 0 0 0.3rem $primary-color;
+    }
+  }
 }
 
-::-webkit-scrollbar{
-    width: 0.8rem;
-    height: 0.5rem;
-    background-color: rgb(234, 234, 234);
+.buttonNoBackground{
+  color: black;
+  background-color: white;
+  border: solid 0.16rem $primary-color;
 }
 
-::-webkit-scrollbar-button{
-    display: none;
+.buttonNoBackground:hover{
+  background-color: $primary-color;
+  color: white;
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: $primary-color;
-    border-radius: 1rem;
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.5rem;
+  background-color: rgb(234, 234, 234);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 1rem;
 }
 
 #newArrivals {
+  margin-top: 15%;
   h1 {
     text-align: center;
     margin: 3%;
+    font-size: 3rem;
   }
   .newArrivalsCardsContainer {
     display: flex;
@@ -282,41 +337,48 @@ button {
 
       .cardImage {
         width: 80%;
-        box-shadow: 1px 1px 5px black;
+        box-shadow: 0 0 0.1rem black;
         overflow: hidden;
 
-        img{
+        img {
+          height: 100%;
+          transition: tranform 2s ease-in;
           object-fit: cover;
-          transition: transform 0.3s ease;
         }
 
-        img:hover{
-          transform: scale(1.2);
+        img:hover {
+          transform: scale(1.1);
         }
       }
 
       .cardStars {
         i {
-          color: var(--mainColor);
+          color: $primary-color;
         }
       }
 
       .newArrivalsBtn {
         background-color: white;
-        border: 2px solid var(--mainColor);
+        border: 0.16rem solid $primary-color;
         padding: 3%;
         color: black;
       }
-    } /*newArrivalsCard*/
-  } /*newArrivalsCardsContaner*/
-} /*newArrivals*/
+    } 
+  } 
+} 
 
-  
 #reviews {
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
 
   .reviewsCardsContainer {
     display: flex;
@@ -327,8 +389,9 @@ button {
 
     .reviewsCard {
       width: 20%;
-      box-shadow: 0.5px 0.5px 8px var(--mainColor);
+      box-shadow: 0rem 0rem 1rem $primary-color;
       padding: 1%;
+      transition: 0.15s;
 
       .cardTop {
         display: flex;
@@ -345,8 +408,7 @@ button {
           width: 35%;
           i {
             color: #eaeaea;
-            width: 100px;
-            font-size: 6rem;
+            font-size: 5rem;
           }
         }
       } /*cardTop*/
@@ -359,31 +421,44 @@ button {
         .cardStars {
           margin-top: 2%;
           i {
-            color: var(--mainColor);
+            color: $primary-color;
           }
         }
       } /*cardBottom*/
-    } /*reviewsCard*/
-  } /*reviewsCardsContainer*/
-} /*reviews*/
+    } 
 
-#banner{
-    margin-top: 2rem;
-    background-image: url(assets/banner.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%; 
-    aspect-ratio: 1920 / 505;
-    position: relative;
-    
-    button{
-        position: absolute;
-        bottom: 7rem;
-        left: 7.5rem;
-        
+    .reviewsCard:hover{
+      background-color: $primary-color;
+      .cardTop{
+        h3{
+          color: white;
+        }
+      }
+      .cardBottom{
+        p, i{
+          color: white;
+        }
+      }
     }
-}
+  }
+} 
 
+#banner {
+  margin-top: 5%;
+  background-image: url(assets/banner.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 1920 / 505;
+  position: relative;
+  
+  
+  button {
+    position: absolute;
+    top: 65%; 
+    left: 7%;
+  }
+}
 
 #ourBlog {
   padding: 1%;
@@ -391,6 +466,7 @@ button {
   h1 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 3rem;
   }
   .ourBlogCardsContainer {
     display: flex;
@@ -399,25 +475,26 @@ button {
 
     .ourBlogCard {
       width: 25%;
-      box-shadow: 1px 1px 5px black;
-      height:27rem;
+      box-shadow: 0 0 0.3rem black;
+      height: 27rem;
+      transition: 0.15s;
 
-      .blogCardImage{
+      .blogCardImage {
         height: 60%;
 
-        img{
+        img {
           object-fit: cover;
         }
-      }        
+      }
 
-      .blogCardText{
+      .blogCardText {
         display: flex;
         flex-direction: column;
         gap: 0.7rem;
         padding: 3%;
 
-        h3{
-          color: var(--mainColor);
+        h3 {
+          color: $primary-color;
         }
 
         p {
@@ -426,89 +503,95 @@ button {
         .blogIcons {
           display: flex;
           justify-content: space-between;
-          color: var(--mainColor);
+          color: $primary-color;
           margin-bottom: 1rem;
         }
-      
-      } /*blogCardText*/
-    } /*ourBlogCard*/
-  } /*ourBlogCardsContainer*/
-} /*ourBlog*/
+      } 
+    } 
 
-footer{
+    .ourBlogCard:hover{
+      background-color: $primary-color;
+      box-shadow: 0 0 1rem $primary-color;
+      h3, p, i{
+        color: white;
+      }
+
+    }
+  }
+} 
+
+footer {
   margin-top: 2rem;
   background-color: $footer-background-color;
   padding: 2rem;
 
-  #footerTopSection{
+  #footerTopSection {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
 
-    .box{
+    .box {
       flex: 1;
-      
     }
 
-    #footersLogoText{
-
-
-      img{
+    #footersLogoText {
+      img {
         width: 6rem;
         user-select: none;
         margin-bottom: 1rem;
       }
 
-      p{
+      p {
         font-size: 0.9em;
       }
-
     }
 
-    h2{
+    h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
 
-    #quickLink{
-
-      a{
+    #quickLink {
+      a {
         color: black;
         text-decoration: none;
         display: block;
         margin-bottom: 0.4rem;
+        transition: 0.15s;
+      }
 
+      a:hover{
+        color: $primary-color;
       }
     }
 
-    #contactInfo{
-
-      .contactBox{
+    #contactInfo {
+      .contactBox {
         display: flex;
         align-items: center;
         margin-bottom: 0.8rem;
       }
-      i{
+      i {
         margin-right: 0.4rem;
       }
-
     }
 
-    #followUs{
-      i{
+    #followUs {
+      i {
         margin-right: 0.4rem;
+        transition: 0.15s;
       }
 
-      i:hover{
+      i:hover {
         cursor: pointer;
+        color: $primary-color;
       }
     }
 
-    #newsletter{
-      
-      input{
+    #newsletter {
+      input {
         display: block;
         margin-bottom: 1rem;
         border: none;
@@ -516,39 +599,195 @@ footer{
         border-radius: 1rem;
         width: 15rem;
         padding: 0.5rem;
-        
       }
 
-      button{
+      button {
         border-radius: 1.5rem;
       }
     }
-
-
-
-
   }
 
-  #footerBottomSection{
-    p{
+  #footerBottomSection {
+    p {
       text-align: center;
-      
-      i{
+
+      i {
         color: $primary-color;
       }
-      span{
+      span {
         color: $primary-color;
       }
     }
   }
-
-
 }
 
 
-  
-
-  
 
 
+// responsive section
+
+// IPad pro 
+@media screen and (max-width: 1025px) {
   
+  #welcome{
+    flex-direction: column;
+    height: auto;
+    #welcomeSection1{
+      margin-top: 15rem;
+    }
+  }
+
+
+  #newArrivals {
+    .newArrivalsCardsContainer {
+      .newArrivalsCard {
+        width: 20%;
+      }
+    }
+  }
+
+  #reviews {
+    .reviewsCardsContainer {
+      .reviewsCard {
+        width: 35%;
+        margin: 1rem;
+      }
+    }
+  }
+
+  #ourBlog {
+    .ourBlogCardsContainer {
+      .ourBlogCard {
+        width: 45%;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+//Ipone XR
+@media screen and (max-width: 415px) {
+  
+
+  header{
+    .navigation{
+      display: none;
+    }
+
+    .sidebar{
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      display: none;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: #acb0b02e ;
+      backdrop-filter: blur(0.5rem);
+      
+      
+      i{
+        font-size: 2rem;
+        margin-top: 3rem;
+        color: $primary-color;
+      }
+
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .menuButton{
+      display: block;
+      order: 3;
+    }
+    .logo{
+      order: 1;
+    }
+    .searchFavIcon{
+      order: 2;
+    }
+
+
+  }
+
+  #welcome{
+    #welcomeSection1{
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      #welcomeTitle{
+        font-size: 2.8rem;
+      }
+      #welcomeText{
+        width: 85%;
+        text-align: center;
+      }
+    }
+  }
+
+  #aboutUs {
+    flex-direction: column;
+    
+    .aboutUsText{
+      justify-content: center;
+      align-items: center;
+      p{
+        text-align: center;
+      }
+    }
+
+    .aboutUsImage,
+    .aboutUsText {
+      width: 90%;
+      padding: 1rem;
+    }
+    
+  }
+
+  #newArrivals {
+    .newArrivalsCardsContainer {
+      .newArrivalsCard {
+        width: 80%;
+      }
+    }
+  }
+
+  #reviews {
+    .reviewsCardsContainer {
+      .reviewsCard {
+        width: 90%;
+        margin: 1rem;
+      }
+    }
+  }
+
+  #banner{
+
+    background-size: 200%;
+    aspect-ratio: 1920 / 1000;
+    
+    button{
+      height: 2rem;
+      width: 6rem;
+      font-size: 0.7rem;
+      top: 70%; 
+      left: 35%;
+    }
+  }
+
+  #ourBlog {
+    .ourBlogCardsContainer {
+      .ourBlogCard {
+        width: 90%;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+

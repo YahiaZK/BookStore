@@ -21,15 +21,27 @@
         <a href="#reviews">Reviews</a>
         <a href="#ourBlog">Blog</a>
       </nav>
+
+      <i onclick="showSidebar()" class="fa-solid fa-bars menuButton"></i>
+      <nav class="sidebar">
+        <i onclick="hideSidebar()" class="fa-solid fa-xmark"></i>
+        <a onclick="hideSidebar()" href="#welcome">Home</a>
+        <a onclick="hideSidebar()" href="#aboutUs">About</a>
+        <a onclick="hideSidebar()" href="#featuredBooks">Featured</a>
+        <a onclick="hideSidebar()" href="#newArrivals">Arrivals</a>
+        <a onclick="hideSidebar()" href="#reviews">Reviews</a>
+        <a onclick="hideSidebar()" href="#ourBlog">Blog</a>
+      </nav>
+
       <div class="searchFavIcon">
         <i class="fa-solid fa-magnifying-glass"></i>
         <i class="fa-solid fa-heart"></i>
       </div>
     </header>
-    
+
     <div id="container">
       <div id="welcome">
-        <div id="welcomeSection1">
+        <div class="items" id="welcomeSection1">
           <div id="welcomeTitle">
             <p>Welcome To</p>
             <p id="welcomeTitleColored">Book Store</p>
@@ -42,7 +54,7 @@
           </p>
           <button>Learn More</button>
         </div>
-        <div id="welcomeSection2">
+        <div class="items" id="welcomeSection2">
           <img id="table-img" src="assets/table.png" alt="image" />
         </div>
       </div>
@@ -68,7 +80,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>
-       <div id="aboutUs">
+      <div id="aboutUs">
         <div class="aboutUsImage">
           <img src="assets/about.png" width="100%" alt="" />
         </div>
@@ -101,7 +113,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_2.jpg" alt="image" />
@@ -113,7 +125,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_3.jpg" alt="image" />
@@ -125,7 +137,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_4.jpg" alt="image" />
@@ -137,7 +149,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_5.jpg" alt="image" />
@@ -149,7 +161,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_6.jpg" alt="image" />
@@ -161,7 +173,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_7.png" alt="image" />
@@ -173,7 +185,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_8.png" alt="image" />
@@ -185,7 +197,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_9.jpg" alt="image" />
@@ -197,7 +209,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_10.png" alt="image" />
@@ -209,7 +221,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_11.jpg" alt="image" />
@@ -221,7 +233,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_12.png" alt="image" />
@@ -233,7 +245,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_13.png" alt="image" />
@@ -245,7 +257,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_14.png" alt="image" />
@@ -257,7 +269,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
           <div class="bookContainer">
             <img class="bookCover" src="assets/book_15.png" alt="image" />
@@ -269,7 +281,7 @@
                 $25.50 <sub><del>$28.60</del></sub>
               </p>
             </div>
-            <button>Learn More</button>
+            <button class="buttonNoBackground">Learn More</button>
           </div>
         </div>
       </div>
@@ -288,7 +300,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -303,7 +315,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -318,7 +330,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -333,7 +345,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -349,7 +361,7 @@
 
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -364,7 +376,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -379,7 +391,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -394,7 +406,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -409,7 +421,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
 
           <div class="newArrivalsCard">
@@ -424,7 +436,7 @@
               <i class="fa-solid fa-star starColor"></i>
               <i class="fa-solid fa-star-half-stroke starColor"></i>
             </div>
-            <button class="newArrivalsBtn" type="button">Learn More</button>
+            <button class="buttonNoBackground" type="button">Learn More</button>
           </div>
         </div>
       </div>
@@ -543,7 +555,7 @@
       <div id="banner">
         <button>Learn More</button>
       </div>
-       <div id="ourBlog">
+      <div id="ourBlog">
         <h1>Our Blog</h1>
         <div class="ourBlogCardsContainer">
           <div class="ourBlogCard">
@@ -611,62 +623,74 @@
         </div>
       </div>
 
-    <footer>
-      <div id="footerTopSection">
-        <div class="box" id="footersLogoText">
-          <img src="assets/logo.png" alt="image" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            adipisci inventore ipsa velit neque maiores minus dicta quidem nulla
-            quia rem, natus id praesentium ullam. Animi, laboriosam
-            exercitationem. Sunt, dicta.
-          </p>
-        </div>
-        <div class="box" id="quickLink">
-          <h2>Quick Link</h2>
-          <a href="#welcome">Home</a>
-          <a href="#aboutUs">About</a>
-          <a href="#featuredBooks">Featured</a>
-          <a href="#newArrivals">Arrivals</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#ourBlog">Blog</a>
-        </div>
-        <div class="box" id="contactInfo">
-          <h2>Contact Info</h2>
-          <div class="contactBox">
-            <i class="fa-solid fa-phone"></i>
-            <p>+94 12 345 6789</p>
+      <footer>
+        <div id="footerTopSection">
+          <div class="box" id="footersLogoText">
+            <img src="assets/logo.png" alt="image" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+              adipisci inventore ipsa velit neque maiores minus dicta quidem
+              nulla quia rem, natus id praesentium ullam. Animi, laboriosam
+              exercitationem. Sunt, dicta.
+            </p>
           </div>
-          <div class="contactBox">
-            <i class="fa-solid fa-phone"></i>
-            <p>+94 32 444 699</p>
+          <div class="box" id="quickLink">
+            <h2>Quick Link</h2>
+            <a href="#welcome">Home</a>
+            <a href="#aboutUs">About</a>
+            <a href="#featuredBooks">Featured</a>
+            <a href="#newArrivals">Arrivals</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#ourBlog">Blog</a>
           </div>
-          <div class="contactBox">
-            <i class="fa-solid fa-envelope"></i>
-            <p>bookstore123@gmail.com</p>
+          <div class="box" id="contactInfo">
+            <h2>Contact Info</h2>
+            <div class="contactBox">
+              <i class="fa-solid fa-phone"></i>
+              <p>+94 12 345 6789</p>
+            </div>
+            <div class="contactBox">
+              <i class="fa-solid fa-phone"></i>
+              <p>+94 32 444 699</p>
+            </div>
+            <div class="contactBox">
+              <i class="fa-solid fa-envelope"></i>
+              <p>bookstore123@gmail.com</p>
+            </div>
+          </div>
+          <div class="box" id="followUs">
+            <h2>Follow Us</h2>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+          <div class="box" id="newsletter">
+            <h2>Newsltter</h2>
+            <input type="text" placeholder="Your email id here" />
+            <button>Subscribe</button>
           </div>
         </div>
-        <div class="box" id="followUs">
-          <h2>Follow Us</h2>
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin-in"></i>
+        <div id="footerBottomSection">
+          <div id="webAuthor">
+            <p>
+              Design By <i class="fa-solid fa-face-grin"></i
+              ><span> WT Master Code</span>
+            </p>
+          </div>
         </div>
-        <div class="box" id="newsletter">
-          <h2>Newsltter</h2>
-          <input type="text" placeholder="Your email id here" />
-          <button>Subscribe</button>
-        </div>
-      </div>
-      <div id="footerBottomSection">
-        <div id="webAuthor">
-          <p>
-            Design By <i class="fa-solid fa-face-grin"></i
-            ><span> WT Master Code</span>
-          </p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
   </body>
 </html>
