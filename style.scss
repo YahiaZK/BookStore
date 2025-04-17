@@ -665,7 +665,7 @@ footer {
   }
 }
 
-//Ipone XR
+//iPhone XR
 @media screen and (max-width: 415px) {
   
 
@@ -772,10 +772,12 @@ footer {
 
   #featuredBooks{
     transform: scale(80%);
+    margin-bottom: 0;
   }
 
   #newArrivals {
-    transform: scale(80%);
+    padding: 8%;
+    margin-top: 0;
     .newArrivalsCardsContainer {
       .newArrivalsCard {
         width: 80%;
