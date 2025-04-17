@@ -715,6 +715,7 @@ footer {
 
   }
 
+
   #welcome{
     #welcomeSection1{
       padding: 0;
@@ -728,10 +729,30 @@ footer {
         text-align: center;
       }
     }
+    #welcomeSection2{
+      transform: scale(80%);
+    }
+  }
+
+  #services{
+    gap: 0.1rem;
+    .service{
+      transform: scale(75%);
+      h2{
+        font-size: 1.4rem;
+      }
+      
+    }
+    #securePayment{
+      h2{
+        font-size: 1.32rem;
+      }
+    }
   }
 
   #aboutUs {
     flex-direction: column;
+    transform: scale(80%);
     
     .aboutUsText{
       justify-content: center;
@@ -749,7 +770,12 @@ footer {
     
   }
 
+  #featuredBooks{
+    transform: scale(80%);
+  }
+
   #newArrivals {
+    transform: scale(80%);
     .newArrivalsCardsContainer {
       .newArrivalsCard {
         width: 80%;
@@ -758,6 +784,7 @@ footer {
   }
 
   #reviews {
+    transform: scale(80%);
     .reviewsCardsContainer {
       .reviewsCard {
         width: 90%;
@@ -781,6 +808,7 @@ footer {
   }
 
   #ourBlog {
+    transform: scale(80%);
     .ourBlogCardsContainer {
       .ourBlogCard {
         width: 90%;
