@@ -10,7 +10,7 @@ $input-box-color: #cacaca;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   scroll-padding-top: 10%;
 }
 
@@ -74,10 +74,10 @@ header {
     display: none;
   }
 
-  .searchFavIcon {
+  .searchFavThemeIcon {
     display: flex;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 0.7rem;
     i{
       transition: 0.15s;
     }
@@ -708,7 +708,7 @@ footer {
     .logo{
       order: 1;
     }
-    .searchFavIcon{
+    .searchFavThemeIcon{
       order: 2;
     }
 
