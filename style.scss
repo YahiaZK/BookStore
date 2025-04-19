@@ -96,6 +96,7 @@ header {
   .searchFavThemeIcon {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 0.7rem;
     i {
       transition: 0.15s;
@@ -104,6 +105,16 @@ header {
     i:hover {
       cursor: pointer;
       color: var(--primary-color);
+    }
+    #searchInput{
+      display: none;
+      font-size: large;
+      padding: 0.3rem;
+      border-radius: 3rem;
+      transition: all 0.3s ease-in-out;
+    }
+    #searchInput.visible{
+      display: inline-block;
     }
   }
 }
