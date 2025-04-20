@@ -16,7 +16,6 @@
 }
 
 .dark {
-  --primary-color: #089da1;
   --background-color: #202124;
   --text-color: white;
   --gray-text-color: #c0c0c0;
@@ -114,6 +113,11 @@ header {
     }
     #searchInput.visible {
       display: inline-block;
+    }
+    input[type="color"] {
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
     }
   }
 }
