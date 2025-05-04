@@ -155,6 +155,7 @@ header {
     #welcomeText {
       font-size: 1.4rem;
       color: var(--text-color);
+      text-align: justify;
     }
   }
 
@@ -256,6 +257,7 @@ button:hover {
     p {
       font-size: small;
       color: var(--text-color);
+      text-align: justify;
     }
   }
 }
@@ -460,6 +462,7 @@ button:hover {
         p {
           font-size: small;
           color: var(--text-color);
+          text-align: justify;
         }
         .cardStars {
           margin-top: 2%;
@@ -544,6 +547,7 @@ button:hover {
         p {
           font-size: small;
           color: var(--text-color);
+          text-align: justify;
         }
         .blogIcons {
           display: flex;
@@ -592,6 +596,7 @@ footer {
       p {
         font-size: 0.9em;
         color: var(--text-color);
+        text-align: justify;
       }
     }
 
