@@ -1,3 +1,3 @@
 # BookStore
 
-The first task for ASAL Training that is building a website with HTML and CSS
+An online Book Store website featuring a modern, responsive design with sections for featured books, new arrivals, customer reviews, and blogs. It provides easy navigation, search functionality, and a clean user experience.
